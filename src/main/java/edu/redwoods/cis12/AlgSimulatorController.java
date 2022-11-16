@@ -26,8 +26,7 @@ public class AlgSimulatorController {
         algs.add(new BinarySearchSimulation(this));
         algorithmList.setItems(algs);
 
-        algorithmList.getSelectionModel().selectedItemProperty()
-                .addListener(
+        algorithmList.getSelectionModel().selectedItemProperty().addListener(
                         (ov, oldAlg, newAlg) -> newAlg.loadControls()
                 );
     }
